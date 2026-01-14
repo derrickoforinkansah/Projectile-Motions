@@ -1,2 +1,71 @@
-# Projectile-Motions
+# Projectile Motions
 These files tell you everything about the motion of a projectile in Numerical Analysis
+## How the Code Works
+- Importing Math Functions
+
+```python
+import math
+```
+This allows the use of sin, cos, and pi.
+
+- Defining the Newton Method Function
+
+```python
+def newton_method(v0, h):
+```
+
+This function takes:
+v0: initial velocity
+h: height
+And returns the angle α.
+
+- Initial Guess
+
+```python
+alpha = math.pi / 4
+```
+Starts with 45° as the first guess.
+
+- Convergence Settings
+
+```python
+epsilon = 1e-6
+max_iterations = 100
+```
+epsilon: how accurate the result should be
+
+max_iterations: safety limit
+
+- Newton’s Iteration
+
+```python
+f_alpha = math.sin(alpha) - (2 * 9.8 * h / (v0**2))**(1/2)
+f_prime_alpha = math.cos(alpha)
+alpha = alpha - f_alpha / f_prime_alpha
+```
+This updates α using:
+
+𝛼_𝑛𝑒𝑤 =𝛼 − 𝑓(𝛼)/𝑓′(𝛼)
+
+​
+Until the error is very small.
+
+- Using the Function
+
+```python
+v0 = 10
+h = 1
+alpha = newton_method(v0, h)
+print("the value of α is approximately: =", alpha)
+```
+
+It calculates α for:
+
+Velocity = 10 m/s
+
+Height = 1 m
+
+
+## note 
+
+*all the figures used are just samples to prove the code works*
