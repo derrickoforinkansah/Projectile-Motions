@@ -69,3 +69,52 @@ Height = 1 m
 ## note 
 
 *all the figures used are just samples to prove the code works*
+
+### In the second part/section of the code (Visuals)
+- Import Libraries
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+```
+numpy → for numerical arrays
+
+matplotlib → for plotting graphs
+
+- Set Desired Initial Velocity
+```python
+v0 = 10  # m/s
+```
+Same velocity as before.
+
+- Create Height Values
+```python
+h_values = np.arange(0, 3.1, 0.1)
+```
+This creates: 0.0, 0.1, 0.2, ..., 3.0
+
+So you test many heights instead of just one.
+
+- Compute Angles
+```python
+alpha_values = [newton_method(v0, h) for h in h_values]
+```
+For each height:
+
+Newton’s Method finds α
+
+Results are stored in a list
+
+- Plot the Graph
+```python
+plt.plot(h_values, alpha_values)
+plt.xlabel("Height (h)")
+plt.ylabel("Angle (α)")
+plt.title("Angle α vs. Height h")
+plt.grid(True)
+plt.show()
+```
+This produces a clean graph showing how the angle changes with height
+
+## note again 
+
+*all the figures used are just samples to prove the code works*
