@@ -118,3 +118,7 @@ This produces a clean graph showing how the angle changes with height
 ## note again 
 
 *all the figures used are just samples to prove the code works*
+
+ # the first file (PM) contains the first section of the code and the second section of the code is (PM02)
+
+*comnbning them in Jupyter Lab is also shown the 3rd File*
